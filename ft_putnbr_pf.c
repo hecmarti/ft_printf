@@ -6,12 +6,18 @@
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 15:43:25 by hecmarti          #+#    #+#             */
-/*   Updated: 2024/02/20 15:45:44 by hecmarti         ###   ########.fr       */
+/*   Updated: 2024/02/20 16:14:51 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+/**
+ * @brief Print a number and increment the counter.
+ * @param num The number to print.
+ * @param counter The counter to increment.
+ * @note If the number is INT_MIN, it will print "-2147483648".
+*/
 void	ft_putnbr_pf(int num, size_t *counter)
 {
 	if (num == -2147483648)
