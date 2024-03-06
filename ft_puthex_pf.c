@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putptr_pf.c                                     :+:      :+:    :+:   */
+/*   ft_puthex_pf.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/20 16:09:02 by hecmarti          #+#    #+#             */
-/*   Updated: 2024/02/28 13:43:19 by hecmarti         ###   ########.fr       */
+/*   Created: 2024/02/28 12:20:11 by hecmarti          #+#    #+#             */
+/*   Updated: 2024/02/28 12:22:47 by hecmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 /**
- * @brief Print a pointer and increment the counter.
- * @param ptr The pointer to print.
+ * @brief Print an hexadecimal number and increment the counter.
+ * @param num The number to print.
  * @param counter The counter to increment.
- * @note The pointer will be printed in hexadecimal.
-*/
-void	ft_putptr_pf(void *ptr, size_t *counter)
+ * @param base The base to use.
+ */
+void	ft_puthex_pf(unsigned int num, size_t *counter, char *base)
 {
-	ft_putstr_pf("0x", counter);
-	ft_puthex_pf((unsigned long long)ptr, counter, HEX_LOW_BASE);
+	if (num > 15)
+	{
+		ft_puthex_pf(num / 16, counter, base);
+		ft_puthex_pf(num % 16, counter, base);
+	}
+	else
+		ft_putchar_pf(base[num], counter);
 }

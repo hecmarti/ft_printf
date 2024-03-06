@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: adiaz-be <adiaz-be@student.42malaga.c      +#+  +:+       +#+         #
+#    By: hecmarti <hecmarti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/13 15:40:29 by adiaz-be          #+#    #+#              #
-#    Updated: 2022/10/13 15:40:33 by adiaz-be         ###   ########.fr        #
+#    Created: 2024/03/06 16:09:58 by hecmarti          #+#    #+#              #
+#    Updated: 2024/03/06 16:10:03 by hecmarti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,6 @@ SRC	=	ft_printf.c			\
 		ft_putuint_pf.c		\
 		ft_puthex_pf.c		\
 		ft_putptr_pf.c		\
-		ft_aux_pf.c			\
 
 OBJS = $(SRC:.c=.o)
 
