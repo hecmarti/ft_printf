@@ -9,3 +9,10 @@ The `ft_printf.c` file is a custom implementation of the `printf` function in C.
 ## Usage
 
 To use the `ft_printf` function, include the `ft_printf.h` header file in your C program:
+```
+#include "ft_printf.h"
+```
+
+## All requirements
+
+[ft_printf subject](subject.pdf)
